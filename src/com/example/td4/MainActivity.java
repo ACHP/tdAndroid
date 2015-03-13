@@ -9,6 +9,10 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+
+
+
 
 public class MainActivity extends Activity {
 
@@ -29,8 +33,18 @@ public class MainActivity extends Activity {
 		ListView lv = (ListView)findViewById(R.id.listView1);
 		
 		lv.setAdapter(aa);
-		samSoule ss = new samSoule();
-		lv.setOnItemClickListener(ss);
+	
+		
+		lv.setOnItemClickListener(new OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+                    long arg3) {
+                // TODO Auto-generated method stub
+
+                Toast.makeText(getApplicationContext(), tp[position], Toast.LENGTH_SHORT).show();
+
+            }
+        });
 		
 			
 		}
