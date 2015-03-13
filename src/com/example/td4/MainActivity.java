@@ -11,16 +11,19 @@ public class MainActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		exo1();
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		exo1();
 	}
 	
 	private void exo1(){
 		String[] tp= {"Leibniz","Descartes","Euler"};
 		ArrayAdapter<String> aa = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, tp);
 		ListView lv = (ListView)findViewById(R.id.listView1);
-		lv.
+		
+		lv.setAdapter(aa);
 		
 		}
 	
